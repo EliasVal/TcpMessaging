@@ -13,3 +13,17 @@ The process is the same for sign-up, just without password checking.
 When a client sends a message, the server receives it and forwards it to the rest of the clients that are connected.
 
 And that's basically it, (after grossly oversimplifying) I suppose.
+
+## NOTE:
+If you are gonna use the code, on the first line of the `Main()` method and at the end of the `CreateUser()` method in `Program.cs` in the `server` branch, change the path to your XML file.
+Structure should be:
+```xml
+<users>
+ <username>
+  <token> ... </token>
+  <tokenExp> ... </tokenExp>
+  <salt> ... </salt>
+  <pass> ... </pass>
+ </username>
+</users>
+```
